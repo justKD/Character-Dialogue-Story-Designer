@@ -1,0 +1,775 @@
+@import "generic.scss";
+@import "menu.scss";
+// @import "../library/animate-3.6.0.less";
+
+/* ********** */
+
+/* Document Settings */
+
+/* ********** */
+
+/* Customize Scrollbar */
+
+.simplebar-scrollbar {
+  right: 1px;
+  width: 4px;
+}
+
+.simplebar-scrollbar:before {
+  background: $body-background-color;
+}
+
+.horizontal.simplebar-track .simplebar-scrollbar {
+  height: 4px;
+}
+
+/* ********** */
+
+/* Gradient Fades */
+
+.fade-overlay {
+  @extend .no-pointer;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9001;
+  border-radius: 10px;
+}
+
+.fade-overlay.thumbnail-fade {
+  background-image: -webkit-linear-gradient(
+    180deg,
+    #161718,
+    transparent 2%,
+    transparent 98%,
+    #161718
+  );
+  background-image: linear-gradient(
+    270deg,
+    #161718,
+    transparent 2%,
+    transparent 98%,
+    #161718
+  );
+}
+
+.fade-overlay.card-fade {
+  background-image: -webkit-linear-gradient(
+    270deg,
+    #161718,
+    transparent 5%,
+    transparent 80%,
+    #161718
+  );
+  background-image: linear-gradient(
+    180deg,
+    #161718,
+    transparent 5%,
+    transparent 80%,
+    #161718
+  );
+}
+
+.fade-overlay.options-fade {
+  background-image: -webkit-linear-gradient(
+    270deg,
+    #161718,
+    transparent 2%,
+    transparent 98%,
+    #161718
+  );
+  background-image: linear-gradient(
+    180deg,
+    #161718,
+    transparent 2%,
+    transparent 98%,
+    #161718
+  );
+}
+
+/* ********** */
+
+/* ********** */
+
+.top-container {
+  @extend .flex;
+  width: 100%;
+  height: $top-section-height;
+  min-height: $top-section-height;
+  margin-bottom: $section-spacer;
+}
+
+.thumbnail-container {
+  @extend .flex;
+  @extend .section;
+  @extend .section.left-side;
+}
+
+
+/* ********** */
+
+.bottom-container {
+  @extend .flex;
+  width: 100%;
+  height: 100%;
+  min-height: $app-min-height - $top-section-height;
+}
+
+.card-container {
+  @extend .section;
+  @extend .section.left-side;
+}
+
+.options-container {
+  @extend .section;
+  @extend .section.right-side;
+}
+
+/* ********** */
+
+/* Options Container */
+
+.options-container-inner {
+  @extend .inner;
+  width: 100%;
+  height: 100%;
+  padding-top: $section-spacer + 1;
+}
+
+.options-form-container {
+  padding-right: $section-spacer;
+  padding-left: $section-spacer;
+}
+
+.options-form {
+  @extend .flex;
+  @extend .flex.column;
+}
+
+.options-section-heading-container {
+  margin-bottom: 16px;
+  text-align: right;
+}
+
+.options-section-heading {
+  @extend .font-size-bigger;
+  margin-bottom: 2px;
+  color: $options-input-color;
+  font-weight: $font-weight-bold;
+  text-align: left;
+}
+
+.options-section-line {
+  width: 100%;
+  height: 1px;
+  float: right;
+  border: 1px solid $options-input-color;
+  background-color: $options-input-color;
+}
+
+.option-container {
+  @extend .flex;
+  @extend .flex.column;
+  margin-bottom: $section-spacer;
+}
+
+.option-field-label {
+  @extend .font-size-normal;
+  font-weight: $font-weight-medium;
+  color: $options-label-color;
+  margin-bottom: $section-spacer / 4;
+}
+
+.option-text-field {
+  @extend .font-size-normal;
+  font-weight: $font-weight-normal;
+  color: $options-input-color;
+  border-radius: $roundness / 2;
+  background-color: transparent;
+  height: $input-height * 1.5;
+  padding: $input-padding;
+  resize: none;
+}
+
+.option-select-container {
+  @extend .inner;
+}
+
+.option-select-image-container {
+  @extend .no-pointer;
+  position: absolute;
+  right: 5px;
+  margin-top: 10px;
+}
+
+.option-select-image {
+  max-width: 15px;
+}
+
+.option-select {
+  @extend .transparent-select;
+  @extend .font-size-normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  text-transform: none;
+  color: $options-input-color;
+  font-weight: $font-weight-normal;
+  border-radius: $roundness / 2;
+  padding: $input-padding;
+  height: $input-height;
+  border-color: $options-input-color;
+}
+
+.option-container-group {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.spread;
+  @extend .flex.row.vertical.stretch;
+  margin-bottom: $section-spacer + 6;
+  text-align: left;
+}
+
+.option-container-group-child {
+  width: calc(50% - 5px);
+  &.left {
+    padding-right: 5px;
+  }
+  &.right {
+    padding-left: 5px;
+  }
+}
+
+
+
+/* ********** */
+
+/* Card Container */
+
+.card-container-inner {
+  @extend .inner;
+  @extend .flex;
+  @extend .flex.column;
+  @extend .flex.column.vertical.top;
+  @extend .flex.column.horizontal.center;
+  @extend .transition;
+  width: 100%;
+  height: 100%;
+}
+
+/* Card */
+
+.card {
+  @extend .no-select;
+  @extend .section;
+  @extend .transition;
+  width: 500px;
+  height: 300px;
+  margin-top: 80px;
+}
+
+.card-spacer {
+  height: 300px;
+}
+
+.card.last {
+  margin-bottom: 80px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card.focus {
+  transform: scale(1.15);
+  box-shadow: 8px 8px 8px 0 #000;
+}
+
+.card:focus {
+  transform: scale(1.25);
+}
+
+.card-inner {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.space;
+  @extend .flex.row.vertical.stretch;
+  height: 50%;
+}
+
+/* Card Text */
+
+.card-text-container {
+  @extend .flex;
+  @extend .flex.column;
+  @extend .flex.column.vertical.bottom;
+  @extend .flex.column.horizontal.stretch;
+  width: 100%;
+  padding: $section-padding;
+  margin-bottom: 20px;
+}
+
+.card-text-line {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.card-text {
+  @extend .font-size-normal;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
+  max-width: 50%;
+  color: $options-input-color;
+}
+
+.card-text.right {
+  margin-left: 50%;
+  text-align: right;
+}
+
+/* Card Image */
+
+.card-image-container {
+  @extend .flex-child.grow;
+  @extend .flex;
+  @extend .flex.row;
+  width: 50%;
+}
+
+.card-image-container.left.near {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.left;
+}
+
+.card-image-container.left.mid {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.center;
+}
+
+.card-image-container.left.far {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.right;
+}
+
+.card-image-container.right.near {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.right;
+}
+
+.card-image-container.right.mid {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.center;
+}
+
+.card-image-container.right.far {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.left;
+}
+
+.card-image-container.left.hidden {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.left;
+  opacity: 0;
+}
+
+.card-image-container.right.hidden {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.right;
+  opacity: 0;
+}
+
+.card-image {
+  height: 100%;
+  max-width: 130px;
+}
+
+/* ********** */
+
+/* ********** */
+
+/* Thumbnail Container */
+
+.thumbnail-container-inner {
+  @extend .inner;
+  @extend .flex;
+  @extend .flex.row;
+  width: 100%;
+  height: 100%;
+}
+
+.thumbnail-add-container {
+  @extend .inner;
+  @extend .center-content;
+  padding-left: $section-padding;
+  padding-right: $section-padding * 2;
+  height: 100%;
+}
+
+.thumbnail-section {
+  @extend .inner;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.thumbnail-section-inner {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.left;
+  @extend .flex.row.vertical.center;
+  height: $top-section-height;
+}
+
+.thumbnail-section-transition-wrapper {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.left;
+  @extend .flex.row.vertical.center;
+  margin-top: 10px;
+  height: $top-section-height - 10px;
+}
+
+.thumbnail {
+  @extend .flex-child.no-shrink;
+  @extend .no-select;
+  @extend .transition;
+  border-radius: $roundness;
+  width: $top-section-height;
+  height: $top-section-height - ($section-padding * 4);
+  margin-left: $section-padding * 3;
+  background-color: $body-background-color;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.card-text.thumbnail-text {
+  font-size: 3px;
+  line-height: 4px;
+}
+
+.card-text-container.thumbnail-text-container {
+  padding: 4px;
+  margin-bottom: 2px;
+}
+
+.card-text-line.thumbnail-text-line {
+  margin-bottom: 4px;
+}
+
+.card-image-container.thumbnail-image-container {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.card-image.thumbnail-image {
+  max-width: $top-section-height / 3.25;
+}
+
+.thumbnail-add {
+  @extend .thumbnail;
+  @extend .no-select;
+  @extend .center-content;
+  font-size: 40px;
+  color: $options-label-color;
+  margin-left: $section-padding;
+}
+
+.thumbnail-add:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-spacer {
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  min-width: $top-section-height / 2;
+}
+
+/* ********** */
+
+/* Popup Menus */
+
+$popup-padding: 20px;
+$popup-margin: 50px;
+$popup-close-button-size: 30px;
+//
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9100;
+  font-family: Lato;
+  padding: $popup-padding;
+  background-image: url("./assets/media/card-background.jpg");
+  background-size: cover;
+}
+
+.popup-container-inner {
+  @extend .section;
+  @extend .inner;
+  width: 100%;
+  height: 100%;
+  background-color: $container-background-color;
+}
+
+.popup-close-button {
+  @extend .center-content;
+  @extend .no-select;
+  color: $options-input-color;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9101;
+  height: $popup-close-button-size;
+  width: $popup-close-button-size;
+}
+
+.popup-content-button {
+  @extend .no-select;
+  @extend .font-size-bigger;
+  @extend .transition;
+  width: 20%;
+  height: 50%;
+  background-color: transparent;
+  border: 1px solid $options-input-color;
+  color: $options-input-color;
+}
+
+.popup-content-button-faded {
+  opacity: 0.5;
+}
+
+.popup-content-container {
+  @extend .inner;
+  width: 100%;
+  height: 100%;
+}
+
+/* ********** */
+
+#popup-content-states {
+  @extend .flex;
+  @extend .flex.column;
+}
+
+.popup-content-header {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.space;
+  @extend .flex.row.vertical.center;
+  width: 100%;
+  height: $top-section-height+ 50;
+}
+
+.popup-content-footer {
+  width: 100%;
+  height: 25px;
+}
+
+.popup-content-columns {
+  @extend .flex;
+  @extend .flex.row;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.popup-column {
+  @extend .flex;
+  @extend .flex.column;
+  width: 100%;
+  height: 100%;
+  padding-top: $popup-padding;
+  color: $options-input-color;
+  overflow: auto;
+}
+
+.popup-column.left-column {
+  padding-left: $popup-padding;
+  padding-right: $popup-padding / 2;
+}
+
+.popup-column.right-column {
+  padding-left: $popup-padding / 2;
+  padding-right: $popup-padding;
+}
+
+.saved-state-slot {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .transition;
+  color: $options-input-color;
+  width: 100%;
+  height: 100%;
+  margin-bottom: $popup-padding;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.saved-state-slot-number {
+  @extend .no-pointer;
+  @extend .center-content;
+  height: 100%;
+  width: 45px;
+}
+
+.saved-state-slot-item {
+  @extend .flex-child.grow;
+  @extend .transition;
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.vertical.center;
+  height: 100%;
+  padding-left: $popup-padding;
+}
+
+.saved-state-slot-focus {
+  transform: scale(1.025);
+  border-bottom: 1px solid $options-input-color;
+}
+
+.saved-state-slot-rename {
+  transform: translateX($popup-padding);
+}
+
+.saved-state-text-field {
+  @extend .no-pointer;
+  @extend .font-size-normal;
+  @extend .transition;
+  font-weight: $font-weight-normal;
+  color: $options-input-color;
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+}
+
+/* ********** */
+
+#popup-content-export {
+  @extend .flex;
+  @extend .flex.column;
+}
+
+#import-export-popup {
+  @extend .flex;
+  @extend .flex.column;
+}
+
+#import-export-popup-inner {
+  height: $top-section-height;
+}
+
+#popup-content-export-options {
+  @extend .flex;
+  @extend .flex.column;
+  margin-top: $popup-padding;
+}
+
+.export-options-inner {
+  @extend .flex;
+  @extend .flex.column;
+  height: 100%;
+  color: $options-input-color;
+  padding-top: $popup-padding;
+  padding-left: $popup-margin;
+  padding-right: $popup-margin;
+}
+
+.export-option-slot {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .transition;
+  color: $options-input-color;
+  height: 100%;
+  margin-bottom: $popup-padding;
+}
+
+.export-scenario-label {
+  @extend .center-content;
+  font-weight: 600;
+  width: 15%;
+  margin-right: $popup-padding;
+}
+
+.export-select-group {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.vertical.center;
+  width: 85%;
+}
+
+.export-select-container {
+  position: relative;
+  width: 50%;
+}
+
+.export-select-container.left {
+  margin-right: $popup-margin;
+}
+
+.export-select-wrapper {
+  border-bottom: 1px solid $options-input-color;
+}
+
+.export-select {
+  @extend .transparent-select;
+  @extend .font-size-normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  text-transform: none;
+  color: $options-input-color;
+  font-weight: $font-weight-normal;
+  padding: $input-padding;
+  height: $input-height;
+  border: none;
+}
+
+/* ********** */
+
+/* Vue Transitions */
+
+.card-list-transitions-enter-to,
+.card-list-transitions-enter-active {
+  @extend .animated !optional;
+  @extend .bounceIn !optional;
+}
+
+.card-list-transitions-leave-to {
+  opacity: 0;
+  transform: scale(0.01);
+}
+
+.card-list-transitions-leave-active {
+  position: absolute;
+}
+
+.thumbnail-list-transitions-enter-to,
+.thumbnail-list-transitions-enter-active {
+  @extend .animated !optional;
+  @extend .bounceIn !optional;
+}
+
+.thumbnail-list-transitions-leave-to {
+  opacity: 0;
+  transform: scale(0.01);
+}
+
+.thumbnail-list-transitions-leave-active {
+  position: absolute;
+}

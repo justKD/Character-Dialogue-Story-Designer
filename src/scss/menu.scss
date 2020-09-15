@@ -1,0 +1,88 @@
+/* Menu Container */
+
+@import "./generic.scss";
+
+.menu-container {
+  @extend .section;
+  @extend .section.right-side;
+}
+
+.menu-container-inner {
+  @extend .inner;
+  @extend .flex;
+  @extend .flex.column;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-container-inner-inner {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.space;
+  @extend .flex.row.vertical.center;
+  color: white;
+  height: 50%;
+  padding-left: $section-spacer;
+  padding-right: $section-spacer;
+}
+
+.menu-button-image {
+  max-width: 50px;
+}
+
+.menu-item {
+  @extend .transition;
+  @extend .no-select;
+  width: 100%;
+  text-align: center;
+}
+
+.menu-item.group-left {
+  margin-right: 20px;
+}
+
+.menu-item.middle {
+  width: 60%;
+}
+
+.menu-item.button:hover {
+  transform: scale(1.1);
+}
+
+.menu-container-group {
+  @extend .flex;
+  @extend .flex.row;
+  @extend .flex.row.horizontal.spread;
+  @extend .flex.row.vertical.center;
+  text-align: left;
+}
+
+.menu-select-container {
+  position: relative;
+}
+
+.menu-select-image-container {
+  @extend .no-pointer;
+  position: absolute;
+  right: 5px;
+  margin-top: 10px;
+}
+
+.menu-select-image {
+  max-width: 15px;
+}
+
+.menu-select {
+  @extend .transparent-select;
+  @extend .font-size-normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  text-transform: none;
+  color: $options-input-color;
+  font-weight: $font-weight-normal;
+  border-radius: $roundness / 2;
+  padding: $input-padding;
+  height: $input-height;
+  border-color: $options-input-color;
+}
