@@ -4,6 +4,9 @@ by [@justKD](https://github.com/justKD)
 
 ## This project is currently undergoing a major overhaul. It is unlikely it will be usable in its current state.
 
+<!-- [![vue](https://img.shields.io/badge/made%20with-vue-blue)]()
+[![vue](https://img.shields.io/badge/made%20with-vue-blue)]() -->
+
 <!-- [https://scenario-builder.justkd.app/](https://scenario-builder.justkd.app/) -->
 
 <!-- [mirror](https://zpiiu.csb.app/) -->
